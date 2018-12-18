@@ -1,32 +1,63 @@
-.App {
-  text-align: center;
+.timeline-container{
+  margin: 0;
+  margin-top: 200px;
+  height: 100%;;
+  position: relative;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+html,body,#root,.App{
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.timeline-liner{
+  border-top: 4px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.time-line-content{
+  padding: 4px;
+  float: left;
+  width: 5vw;
+  position: relative;;
+}
+.time-line-box{
+  position: absolute;
+  top:-145px;
+  white-space: nowrap;
+  width: 10vw;
+  height: 100px;
+  border:1px solid whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.time-line-box::before{
+  content: "";
+  height: 24px;
+  width: 24px;
+}
+
+.time-line-content span::before{
+  content: '';
+  height: 24px;
+  width: 24px;
+  background-color: black;
+  border-radius: 24px;
+  display: block;
+  position: absolute;
+  top:-15px;
+  left: 2vw;
+}
+
+/* .timeline-liner .time-line-content:nth-child(even){
+  top: -50px;
+}
+.timeline-liner .time-line-content:nth-child(odd) span::before{
+  top:-65px;
+}
+.timeline-liner .time-line-content:nth-child(even) span::before{
+  top:35px;
+}
+.timeline-liner .time-line-content:nth-child(odd){
+  top: 50px;
+} */
+.timeline-container .time-line-content:nth-child(even) .time-line-box {
+  top: 35px;
 }
